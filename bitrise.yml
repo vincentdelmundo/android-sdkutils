@@ -12,8 +12,8 @@ workflows:
   build-and-test:
     before_run:
     - _setup-env
-    # after_run:
-    # - _run-sonarqube-scanner
+    after_run:
+    - _run-sonarqube-scanner
     steps:
     - cache-pull@2: {}
     - script@1:
